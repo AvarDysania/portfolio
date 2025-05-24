@@ -1,41 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Experience</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
   </head>
-  <body>
-    <nav class="navbar bg-body-tertiary">
-      <form class="container-fluid justify-content-start">
-        <button class="btn btn-outline-success me-2 mx-2"><a href="index.html">Home</a></button>
-        <button class="btn btn-outline-success me-2 "><a href="Education.html">Education</a></button>
-        <!--<button class="btn btn-outline-success me-2 "><a href="Research.html">Research Work</a></button>-->
-        <button class="btn btn-outline-success me-2 "><a href="Projects.html">Projects</a></button>
-        <button class="btn btn-outline-success me-2 "><a href="Skills.html">Skills</a></button>
-        
-      </form>
-    </nav>
-    <header class="font-normal text-center text-5xl" style="color:blueviolet;">Experience</header>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-     
-    <div class="experience">
-      <div class="researchwork">
-        <ul role="list" class="marker:text-purple-400 list-disc pl-5 space-y-3 text-slate-400 ">
-        
-          <li class="mx-16 hover:font-bold text-2xl ml-16 mt-4">Technology Virtual Experinece Program</li>
-          <ul role="list" class="marker:text-purple-400 list-disc pl-5 space-y-3 text-slate-400 ">
+  <body class="bg-gradient-to-br from-white to-purple-50 min-h-screen">
 
-            <li class="mx-16 font-semibold text-slate-500 ml-20 mt-6"  >At Deloitte From January 2023 to February 2023.</li>
-        
-            <li class="mx-16 font-semibold  ml-20 mt-6">Completed the Practical Tasks regarding Coding, Cyber Security and many more.</li>
-          <ul>  
-        <ul>  
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm">
+      <div class="container mx-auto px-4 py-4 flex space-x-6">
+        <a href="index.html" class="text-purple-600 font-semibold hover:underline">Home</a>
+        <a href="Education.html" class="text-purple-600 font-semibold hover:underline">Education</a>
+        <!-- <a href="Research.html" class="text-purple-600 font-semibold hover:underline">Research</a> -->
+        <a href="Projects.html" class="text-purple-600 font-semibold hover:underline">Projects</a>
+        <a href="Skills.html" class="text-purple-600 font-semibold hover:underline">Skills</a>
       </div>
-    </div>
+    </nav>
 
+    <!-- Header -->
+    <header class="text-center mt-10 mb-6">
+      <h1 class="text-5xl font-bold text-purple-700">Experience</h1>
+    </header>
 
+    <!-- Experience Content -->
+    <main class="container mx-auto px-6">
+      <section class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-purple-500 max-w-3xl mx-auto">
+        <h2 class="text-2xl font-semibold text-purple-700 mb-4">Technology Virtual Experience Program</h2>
+        
+        <ul class="space-y-4 list-disc list-inside text-gray-700">
+          <li>
+            <span class="font-medium text-gray-800">Deloitte (January 2023 – February 2023)</span><br />
+            Completed a virtual internship with practical tasks in:
+            <ul class="list-disc list-inside ml-6 mt-2 text-sm text-gray-600 space-y-2">
+              <li>Programming and scripting</li>
+              <li>Cybersecurity fundamentals</li>
+              <li>Practical scenario-based tasks</li>
+              <li>Corporate tech workflow exposure</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 text-sm mt-16 mb-6">
+      &copy; 2025 Shimon's Portfolio. All rights reserved.
+    </footer>
   </body>
 </html>
