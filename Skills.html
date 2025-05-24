@@ -1,72 +1,139 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Skills</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    /* Animate fadeInUp for cards */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+  </style>
 </head>
-<body>
-  <nav class="navbar bg-body-tertiary">
-    <div class="container-fluid justify-content-start">
-      <a class="btn btn-outline-success me-2 mx-2" href="index.html">Home</a>
-      <a class="btn btn-outline-success me-2" href="Education.html">Education</a>
-      <!--<a class="btn btn-outline-success me-2" href="Research.html">Research Work</a>-->
-      <a class="btn btn-outline-success me-2" href="Projects.html">Projects</a>
-      <a class="btn btn-outline-success me-2" href="Experience.html">Experience</a>
+
+<body class="bg-gradient-to-r from-purple-50 via-white to-purple-50 min-h-screen text-slate-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex space-x-8 justify-center md:justify-start">
+      <a href="index.html" class="text-purple-700 font-semibold hover:text-purple-900 transition">Home</a>
+      <a href="Education.html" class="text-purple-700 font-semibold hover:text-purple-900 transition">Education</a>
+      <a href="Projects.html" class="text-purple-700 font-semibold hover:text-purple-900 transition">Projects</a>
+      <a href="Experience.html" class="text-purple-700 font-semibold hover:text-purple-900 transition">Experience</a>
     </div>
   </nav>
-  <header class="font-normal px-4 px-md-16 text-center text-md-left text-5xl" style="color:blueviolet;">Skills</header>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h1 class="font-normal px-4 px-md-16 text-center text-md-left text-2xl mt-5" style="color:blueviolet;">Languages/Technologies Known</h1>
-        <ul role="list" class="marker:text-purple-400 list-disc pl-5 space-y-3 text-slate-400">
-          <li class="mx-4 hover:font-bold text-2xl ">C</li>
-           <li class="mx-4 hover:font-bold text-2xl ">C#</li>
-          <li class="mx-4 hover:font-bold text-2xl">C++</li>
-          <li class="mx-4 hover:font-bold text-2xl">Java</li>
-          <li class="mx-4 hover:font-bold text-2xl">Python</li>
-          <li class="mx-4 hover:font-bold text-2xl">HTML</li>
-          <li class="mx-4 hover:font-bold text-2xl">CSS</li>
-          <li class="mx-4 hover:font-bold text-2xl">Javascript</li>
-          <li class="mx-4 hover:font-bold text-2xl">Oracle</li>
-          <li class="mx-4 hover:font-bold text-2xl">SQL</li>
-          <li class="mx-4 hover:font-bold text-2xl">Machine Learning</li>
-        </ul>
-      </div>
-      <div class="col-md-6">
-        <h1 class="font-normal px-4 px-md-16 text-center text-md-left text-2xl mt-5" style="color:blueviolet;">Specialized Subjects Areas</h1>
-        <ul role="list" class="marker:text-purple-400 list-disc pl-5 mt-3 space-y-3 text-slate-400">
-          <li class="mx-4 hover:font-bold text-2xl">Database Management Systems</li>
-          <li class="mx-4 hover:font-bold text-2xl">Computer Based Numerical Techniques</li>
-          <li class="mx-4 hover:font-bold text-2xl">Data Structures</li>
-          <li class="mx-4 hover:font-bold text-2xl">Operating Systems</li>
-          <li class="mx-4 hover:font-bold text-2xl">Data Analytics</li>
-        </ul>
-      </div>
-    </div>
-    <div class="row mt-4">
-      <div class="col-md-6">
-        <h1 class="font-normal px-4 px-md-16 text-center text-md-left text-2xl mt-5" style="color:blueviolet;">IDE/Tools</h1>
-        <ul role="list" class="marker:text-purple-400 list-disc pl-5 space-y-3 text-slate-400">
-          <li class="mx-4 hover:font-bold text-2xl">Spyder</li>
-          <li class="mx-4 hover:font-bold text-2xl">Visual Studio Code</li>
-          <li class="mx-4 hover:font-bold text-2xl">Android Studio</li>
-          <li class="mx-4 hover:font-bold text-2xl">NetBeans</li>
-          <li class="mx-4 hover:font-bold text-2xl">Microsoft Visual Studio Community</li>
-          <li class="mx-4 hover:font-bold text-2xl">Collab by Google</li>
-          <li class="mx-4 hover:font-bold text-2xl">CodeBlocks</li>
-          <li class="mx-4 hover:font-bold text-2xl">PowerBI</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <!-- Header -->
+  <header class="text-center mt-12 mb-16">
+    <h1 class="text-6xl font-extrabold text-purple-800 drop-shadow-lg">Skills</h1>
+    <p class="mt-2 text-purple-600 italic text-lg">Technologies and expertise that power my projects</p>
+  </header>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <!-- Content -->
+  <main class="container mx-auto px-6">
+    <div class="grid gap-12 md:grid-cols-3">
+
+      <!-- Languages / Technologies -->
+      <section class="bg-white rounded-lg shadow-lg p-8 fade-in-up" style="animation-delay: 0.2s">
+        <h2 class="text-3xl font-bold text-purple-700 mb-6 border-b-2 border-purple-300 pb-2">Languages & Technologies</h2>
+        <ul class="space-y-4">
+          <li class="flex items-center gap-3 hover:text-purple-900 cursor-default transition">
+            <span class="inline-block bg-purple-200 text-purple-700 rounded-full p-2 text-sm font-semibold">C</span>
+            <span class="text-xl font-semibold">C</span>
+          </li>
+          <li class="flex items-center gap-3 hover:text-purple-900 cursor-default transition">
+            <span class="inline-block bg-purple-200 text-purple-700 rounded-full p-2 text-sm font-semibold">C#</span>
+            <span class="text-xl font-semibold">C#</span>
+          </li>
+          <li class="flex items-center gap-3 hover:text-purple-900 cursor-default transition">
+            <span class="inline-block bg-purple-200 text-purple-700 rounded-full p-2 text-sm font-semibold">C++</span>
+            <span class="text-xl font-semibold">C++</span>
+          </li>
+          <li class="flex items-center gap-3 hover:text-purple-900 cursor-default transition">
+            <span class="inline-block bg-purple-200 text-purple-700 rounded-full p-2 text-sm font-semibold">Java</span>
+            <span class="text-xl font-semibold">Java</span>
+          </li>
+          <li class="flex items-center gap-3 hover:text-purple-900 cursor-default transition">
+            <span class="inline-block bg-purple-200 text-purple-700 rounded-full p-2 text-sm font-semibold">Python</span>
+            <span class="text-xl font-semibold">Python</span>
+          </li>
+          <li class="flex items-center gap-3 hover:text-purple-900 cursor-default transition">
+            <span class="inline-block bg-purple-200 text-purple-700 rounded-full p-2 text-sm font-semibold">HTML</span>
+            <span class="text-xl font-semibold">HTML</span>
+          </li>
+          <li class="flex items-center gap-3 hover:text-purple-900 cursor-default transition">
+            <span class="inline-block bg-purple-200 text-purple-700 rounded-full p-2 text-sm font-semibold">CSS</span>
+            <span class="text-xl font-semibold">CSS</span>
+          </li>
+          <li class="flex items-center gap-3 hover:text-purple-900 cursor-default transition">
+            <span class="inline-block bg-purple-200 text-purple-700 rounded-full p-2 text-sm font-semibold">JS</span>
+            <span class="text-xl font-semibold">JavaScript</span>
+          </li>
+          <li class="flex items-center gap-3 hover:text-purple-900 cursor-default transition">
+            <span class="inline-block bg-purple-200 text-purple-700 rounded-full p-2 text-sm font-semibold">Oracle</span>
+            <span class="text-xl font-semibold">Oracle</span>
+          </li>
+          <li class="flex items-center gap-3 hover:text-purple-900 cursor-default transition">
+            <span class="inline-block bg-purple-200 text-purple-700 rounded-full p-2 text-sm font-semibold">SQL</span>
+            <span class="text-xl font-semibold">SQL</span>
+          </li>
+          <li class="flex items-center gap-3 hover:text-purple-900 cursor-default transition">
+            <span class="inline-block bg-purple-200 text-purple-700 rounded-full p-2 text-sm font-semibold">ML</span>
+            <span class="text-xl font-semibold">Machine Learning</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Specialized Subjects -->
+      <section class="bg-white rounded-lg shadow-lg p-8 fade-in-up" style="animation-delay: 0.4s">
+        <h2 class="text-3xl font-bold text-purple-700 mb-6 border-b-2 border-purple-300 pb-2">Specialized Areas</h2>
+        <ul class="space-y-5 text-xl text-slate-700">
+          <li class="hover:text-purple-900 cursor-default transition">Database Management Systems</li>
+          <li class="hover:text-purple-900 cursor-default transition">Computer Based Numerical Techniques</li>
+          <li class="hover:text-purple-900 cursor-default transition">Data Structures</li>
+          <li class="hover:text-purple-900 cursor-default transition">Operating Systems</li>
+          <li class="hover:text-purple-900 cursor-default transition">Data Analytics</li>
+        </ul>
+      </section>
+
+      <!-- IDE / Tools -->
+      <section class="bg-white rounded-lg shadow-lg p-8 fade-in-up" style="animation-delay: 0.6s">
+        <h2 class="text-3xl font-bold text-purple-700 mb-6 border-b-2 border-purple-300 pb-2">IDE & Tools</h2>
+        <ul class="space-y-4 text-xl text-slate-700">
+          <li class="hover:text-purple-900 cursor-default transition">Spyder</li>
+          <li class="hover:text-purple-900 cursor-default transition">Visual Studio Code</li>
+          <li class="hover:text-purple-900 cursor-default transition">Android Studio</li>
+          <li class="hover:text-purple-900 cursor-default transition">NetBeans</li>
+          <li class="hover:text-purple-900 cursor-default transition">Microsoft Visual Studio Community</li>
+          <li class="hover:text-purple-900 cursor-default transition">Collab by Google</li>
+          <li class="hover:text-purple-900 cursor-default transition">CodeBlocks</li>
+          <li class="hover:text-purple-900 cursor-default transition">PowerBI</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center mt-16 mb-8 text-sm text-purple-600 font-medium select-none">
+    &copy; 2025 Shimon's Portfolio. All rights reserved.
+  </footer>
+
 </body>
 </html>
 
