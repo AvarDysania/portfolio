@@ -2,78 +2,144 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Education</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
     <style>
       body {
         font-family: 'Inter', sans-serif;
+      }
+      /* Timeline vertical line */
+      .timeline-line {
+        width: 3px;
+        background: linear-gradient(to bottom, #7c3aed, #a78bfa);
+        position: absolute;
+        left: 1.5rem;
+        top: 0;
+        bottom: 0;
+        margin-left: -1.5px;
+        border-radius: 10px;
+      }
+      /* Circle bullet */
+      .timeline-circle {
+        background: #7c3aed;
+        border: 3px solid white;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 0.75rem;
+        box-shadow: 0 0 8px rgba(124, 58, 237, 0.5);
+      }
+      /* Fade in animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-in-up {
+        animation: fadeInUp 0.8s ease forwards;
       }
     </style>
   </head>
   <body class="bg-gradient-to-br from-white to-purple-100 min-h-screen">
 
     <!-- Navbar -->
-    <nav class="bg-white shadow-md">
-      <div class="container mx-auto px-4 py-4 flex justify-start space-x-4">
-        <a href="index.html" class="text-purple-600 font-semibold hover:underline">Home</a>
-        <a href="Experience.html" class="text-purple-600 font-semibold hover:underline">Experience</a>
-        <!-- <a href="Research.html" class="text-purple-600 font-semibold hover:underline">Research</a> -->
-        <a href="Projects.html" class="text-purple-600 font-semibold hover:underline">Projects</a>
-        <a href="Skills.html" class="text-purple-600 font-semibold hover:underline">Skills</a>
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-6 py-4 flex justify-start space-x-8 text-purple-700 font-semibold">
+        <a href="index.html" class="hover:text-purple-900 transition">Home</a>
+        <a href="Experience.html" class="hover:text-purple-900 transition">Experience</a>
+        <!-- <a href="Research.html" class="hover:text-purple-900 transition">Research</a> -->
+        <a href="Projects.html" class="hover:text-purple-900 transition">Projects</a>
+        <a href="Skills.html" class="hover:text-purple-900 transition">Skills</a>
       </div>
     </nav>
 
     <!-- Header -->
-    <header class="text-center mt-10 mb-6">
-      <h1 class="text-5xl font-bold text-purple-700">Education</h1>
+    <header class="text-center mt-16 mb-10">
+      <h1 class="text-6xl font-extrabold text-purple-800 drop-shadow-lg">Education</h1>
+      <p class="text-purple-600 italic mt-2 text-lg">My academic journey & milestones</p>
     </header>
 
-    <!-- Education Cards -->
-    <main class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Timeline Container -->
+    <main class="container mx-auto px-6 relative">
+      <div class="timeline-line hidden md:block"></div>
+
+      <div class="space-y-12">
 
         <!-- BCA -->
-        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl border-l-4 border-purple-600 transition">
-          <h2 class="text-xl font-semibold text-purple-700 mb-2">BCA (Aug 2021 – Present)</h2>
-          <p class="text-gray-700 mb-1"><strong>CGPA:</strong> <i>8.96</i></p>
-          <p class="text-gray-700">
-            <strong>Graphic Era University</strong>, Dehradun, India.<br>
-            Major in Web Development and Python.
-          </p>
+        <div class="relative md:pl-20 fade-in-up" style="animation-delay: 0.2s">
+          <div class="timeline-circle md:left-0 left-6"></div>
+          <div class="bg-white rounded-3xl p-8 shadow-lg border-l-8 border-purple-600 hover:shadow-2xl transition duration-300">
+            <h2 class="text-2xl font-bold text-purple-700 mb-3 flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.34 6.578M12 14l-6.16-3.422a12.083 12.083 0 00-.34 6.578M12 14v7" />
+              </svg>
+              BCA (Aug 2021 – Present)
+            </h2>
+            <p class="text-gray-700 mb-1"><strong>CGPA:</strong> <em>8.96</em></p>
+            <p class="text-gray-700 text-lg leading-relaxed">
+              <strong>Graphic Era University</strong>, Dehradun, India.<br />
+              Major in <span class="text-purple-700 font-semibold">Web Development</span> and <span class="text-purple-700 font-semibold">Python</span>.
+            </p>
+          </div>
         </div>
 
         <!-- Intermediate -->
-        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl border-l-4 border-purple-600 transition">
-          <h2 class="text-xl font-semibold text-purple-700 mb-2">Intermediate</h2>
-          <p class="text-gray-700 mb-1"><strong>Percentile:</strong> <i>87.6</i></p>
-          <p class="text-gray-700">
-            <strong>Grace Academy</strong>, Dehradun, India<br>
-            Completed in 2021<br>
-            (CBSE Board)
-          </p>
+        <div class="relative md:pl-20 fade-in-up" style="animation-delay: 0.4s">
+          <div class="timeline-circle md:left-0 left-6"></div>
+          <div class="bg-white rounded-3xl p-8 shadow-lg border-l-8 border-purple-600 hover:shadow-2xl transition duration-300">
+            <h2 class="text-2xl font-bold text-purple-700 mb-3 flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.34 6.578M12 14l-6.16-3.422a12.083 12.083 0 00-.34 6.578M12 14v7" />
+              </svg>
+              Intermediate
+            </h2>
+            <p class="text-gray-700 mb-1"><strong>Percentile:</strong> <em>87.6</em></p>
+            <p class="text-gray-700 text-lg leading-relaxed">
+              <strong>Grace Academy</strong>, Dehradun, India<br />
+              Completed in 2021<br />
+              (CBSE Board)
+            </p>
+          </div>
         </div>
 
         <!-- High School -->
-        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl border-l-4 border-purple-600 transition">
-          <h2 class="text-xl font-semibold text-purple-700 mb-2">High School</h2>
-          <p class="text-gray-700 mb-1"><strong>Percentile:</strong> <i>86</i></p>
-          <p class="text-gray-700">
-            <strong>Grace Academy</strong>, Dehradun, India<br>
-            Completed in 2019<br>
-            (CBSE Board)
-          </p>
+        <div class="relative md:pl-20 fade-in-up" style="animation-delay: 0.6s">
+          <div class="timeline-circle md:left-0 left-6"></div>
+          <div class="bg-white rounded-3xl p-8 shadow-lg border-l-8 border-purple-600 hover:shadow-2xl transition duration-300">
+            <h2 class="text-2xl font-bold text-purple-700 mb-3 flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.34 6.578M12 14l-6.16-3.422a12.083 12.083 0 00-.34 6.578M12 14v7" />
+              </svg>
+              High School
+            </h2>
+            <p class="text-gray-700 mb-1"><strong>Percentile:</strong> <em>86</em></p>
+            <p class="text-gray-700 text-lg leading-relaxed">
+              <strong>Grace Academy</strong>, Dehradun, India<br />
+              Completed in 2019<br />
+              (CBSE Board)
+            </p>
+          </div>
         </div>
 
       </div>
     </main>
 
     <!-- Footer -->
-    <footer class="text-center text-gray-500 text-sm mt-16 mb-6">
+    <footer class="text-center text-purple-500 text-sm mt-20 mb-6 select-none">
       &copy; 2025 Shimon's Portfolio. All rights reserved.
     </footer>
-
   </body>
 </html>
 
