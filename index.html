@@ -1,101 +1,137 @@
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shimon Joel</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="methods.js"></script>
-    <link rel="stylesheet" href="style.css">
-  
-  </head>
-  <body>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <div class="mynavbar bg-transparent">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-transparent">
-            <div class="container-fluid">
-              <a class="navbar-brand" style="color: rgb(164, 138, 197);font-size: 1.5cm;"href="#">Shimon .</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  <a class="nav-link" href="Education.html">Education</a>
-                  <a class="nav-link" href="Experience.html">Experience</a>
-                  <!--<a class="nav-link" href="Research.html">Research Work</a>-->
-                  <a class="nav-link" href="Projects.html">Projects</a>
-                  <a class="nav-link" href="Skills.html">Skills</a>
-                 
-                  
-                  
-                </div>
-              </div>
-            </div>
-          </nav>
-    </div>
-    <br><br><br>
-       
-    <div class="mywords container">
-        <div class="text-center mt-0 ml-10">
-          <h1 class="font-weight-bold" style="font-size: 3rem;">Hi, My name is <span style="color: blueviolet;">Shimon</span></h1>
-          <h2 class="font-weight-bold" style="font-size: 3rem;">and I am a passionate</h2>
-          <h2 class="font-weight-bold" style="font-size: 3rem;">
-            <span id="element"  style="color: blueviolet;"></span>
-          </h2>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8f9fa;
+      }
+
+      .navbar-brand {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #6f42c1 !important;
+      }
+
+      .nav-link {
+        font-weight: 500;
+        color: #343a40 !important;
+      }
+
+      .hero-text h1, .hero-text h2 {
+        font-weight: 700;
+        color: #343a40;
+      }
+
+      .highlight {
+        color: #6f42c1;
+      }
+
+      .card {
+        border: none;
+        border-radius: 1rem;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+
+      .card-title {
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .btn-dark {
+        background-color: #343a40;
+        border: none;
+        margin-right: 0.5rem;
+      }
+
+      .my-card {
+        background-color: #6f42c1;
+        color: #fff;
+      }
+
+      .hero-text {
+        margin-top: 6rem;
+        margin-bottom: 3rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#">Shimon.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="Education.html">Education</a>
+            <a class="nav-link" href="Experience.html">Experience</a>
+            <a class="nav-link" href="Projects.html">Projects</a>
+            <a class="nav-link" href="Skills.html">Skills</a>
+          </div>
         </div>
       </div>
-   
-    
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container hero-text text-center">
+      <h1>Hi, My name is <span class="highlight">Shimon</span></h1>
+      <h2>and I am a passionate</h2>
+      <h2><span id="element" class="highlight"></span></h2>
+    </div>
+
+    <!-- Profile Card -->
+    <div class="container d-flex justify-content-center mb-5">
+      <div class="card my-card" style="width: 20rem;">
+        <img src="ghibihi.jpg" class="card-img-top" alt="Profile Image">
+        <div class="card-body text-center">
+          <h5 class="card-title">Shimon Joel</h5>
+          <div>
+            <button class="btn btn-dark" onclick="github()">
+              <i class="bi bi-github"></i>
+            </button>
+            <button class="btn btn-dark" onclick="linkedln()">
+              <i class="bi bi-linkedin"></i>
+            </button>
+            <button class="btn btn-dark" onclick="facebook()">
+              <i class="bi bi-facebook"></i>
+            </button>
+            <button class="btn btn-dark" onclick="telegram()">
+              <i class="bi bi-telegram"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
       var typed = new Typed('#element', {
-        strings: ['<i>Web Developer<i>', '<i>Problem Solver<i>','<i>Android Developer</i>','<i>Web Designer</i>','<i>Video Editor</i>.'],
+        strings: ['Web Developer', 'Problem Solver', 'Android Developer', 'Web Designer', 'Video Editor'],
         typeSpeed: 50,
+        backSpeed: 30,
+        loop: true
       });
     </script>
+    <script src="methods.js"></script>
 
-
-
-
-
-    <div class="mydisplaycard container">
-        <div class="card" style="width: 20rem; height: 20rem; margin-right: 40rem; margin-top: 1rem; background-color: rgb(152, 86, 214); ">
-          
-            <img src="ghibihi.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Shimon Joel</h5>
-                
-              <button type="button" class="btn btn-dark" onclick="github()">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"  >
-               
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-              </svg></button>&ensp;
-              
-           
-              <!--SVG file for Linkedln-->
-              <button type="button" class="btn btn-dark" onclick="linkedln()">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16" >
-                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-              </svg></button>&ensp;    
-
-              <!--Facebook-->
-              <button type="button" class="btn btn-dark" onclick="facebook()">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-              </svg></button>&ensp;
-
-              <!--Telegram-->
-              <button type="button" class="btn btn-dark" onclick="telegram()">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
-                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
-              </svg></button>
-              
-            </div>
-          </div>
-    </div>
-   
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   </body>
 </html>
